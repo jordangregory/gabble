@@ -12,6 +12,12 @@ module.exports = function(sequelize, DataTypes) {
   );
   post.associate = function(models) {
     post.belongsTo(models.user, { as: "author", foreignKey: "authorid" });
+    post.hasMany(models.like, {
+      as: "likes",
+      foreignKey: { name: "postid" },
+      onDelete: "cascade",
+      hooks: "true"
+    });
   };
   return post;
 };

@@ -11,12 +11,46 @@ function checkAuth(req, res, next) {
 }
 
 homeRouter.get("/", checkAuth, function(req, res) {
-  models.post.findAll().then(function(foundPosts) {
-    res.render("homepage", { gabs: foundPosts });
-  });
-  // join related posts
-  // render homepage with posts and likes
-  console.log("got home route");
+  models.post
+    .findAll({
+      include: [
+        { model: models.user, as: "author" },
+        {
+          model: models.like,
+          as: "likes",
+          include: [{ model: models.user, as: "user" }]
+        }
+      ],
+      order: [["updatedAt", "DESC"]]
+    })
+    .then(function(foundPosts) {
+      foundPosts.map((e, i, a) => {
+        if (e.authorid == req.session.user.id) {
+          e.delete = true;
+        }
+        return e;
+      });
+      res.render("homepage", { gabs: foundPosts });
+    });
+});
+
+homeRouter.post("/delete/:id/:authorid", (req, res) => {
+  if (req.params.authorid == req.session.user.id) {
+    models.post
+      .find({
+        where: {
+          id: req.params.id
+        }
+      })
+      .then(post => {
+        return post.destroy();
+      })
+      .then(task => {
+        return res.redirect("/");
+      });
+  } else {
+    return res.redirect("/");
+  }
 });
 
 module.exports = homeRouter;

@@ -18,18 +18,24 @@
 	<div>
 		<h1>New Gab</h1>
 		<form action="/gabs/gab" method="post">
-			<input type="textarea" name="body">
-			<input type="submit">
+			<input type="textarea" name="body" placeholder="Gab it up">
+			<button type="submit">Gab It</button>
 		</form>
-
+		<h1>Gabs</h1>
 		<div class="gabList">
 			{{#gabs}}
 			<div>
-			{{body}}
-			<form action="/likes" method="post" >
-				<input type="hidden" name="likerId" value=">
-				<input type="hidden" name="autherId">
-				<input type="submit" value="I like it">
+				{{body}} {{#delete}}
+				<form action="/delete/{{id}}/{{authorid}}" method="post">
+					<button type="submit">Delete</button>
+				</form>{{/delete}}
+				<p>Liked by:</p>
+				{{#likes}}
+				<p>{{user.username}}</p>
+				{{/likes}}
+				<form action="/likes/{{id}}" method="post">
+					<button type="submit">Like</button>
+
 				</form>
 			</div>
 			{{/gabs}}

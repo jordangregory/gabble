@@ -35,10 +35,10 @@ app.use(
   })
 );
 // console log the session
-app.use(function(req, res, next) {
-  console.log(req.session);
-  next();
-});
+// app.use(function(req, res, next) {
+//   console.log(req.session);
+//   next();
+// });
 
 // Routers
 app.use("/welcome", welcomeRoutes);
@@ -46,7 +46,9 @@ app.use("/", homeRoutes);
 app.use("/auth", authRoutes);
 app.use("/likes", likeRoutes);
 app.use("/gabs", gabRoutes);
-
+// app.post("/likes/:id", (req, res) => {
+//   res.send("hey");
+// });
 app.listen(port, function() {
   console.log(`Server is running on port ${port}.`);
 });

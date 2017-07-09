@@ -10,7 +10,8 @@ module.exports = {
       },
       body: {
         type: Sequelize.TEXT,
-        allowNull: false
+        allowNull: false,
+        validate: { len: [0, 140] }
       },
       authorid: {
         type: Sequelize.INTEGER,
