@@ -14,11 +14,7 @@ module.exports = {
       },
       authorid: {
         type: Sequelize.INTEGER,
-        allowNull: false,
-        refererences: {
-          model: "users",
-          key: "id"
-        }
+        allowNull: false
       },
       createdAt: {
         allowNull: false,

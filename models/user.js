@@ -8,11 +8,15 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false
       },
       password: {
-        tpye: DataTypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false
       }
     },
     {}
   );
+
+  user.associate = function(models) {
+    user.hasMany(models.post, { as: "posts", foreignKey: "authorid" });
+  };
   return user;
 };

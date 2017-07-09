@@ -1,6 +1,5 @@
 const express = require("express");
 const app = express();
-const expressValidator = require("express-validator");
 const mustacheExpress = require("mustache-express");
 const bodyParser = require("body-parser");
 const session = require("express-session");
@@ -17,6 +16,12 @@ app.set("views", "./public");
 app.set("view engine", "mustache");
 
 app.use("/", express.static("./public"));
+app.use((req, res, next) => {
+  try {
+    console.log(req.session.user);
+  } catch (err) {}
+  next();
+});
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(
