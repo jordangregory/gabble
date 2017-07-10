@@ -23,7 +23,4 @@ gabRouter.post("/gab", function(req, res) {
   return res.redirect("/");
 });
 
-// gabRouter.get("/gab/id", function(req, res) {
-// });
-
 module.exports = gabRouter;
