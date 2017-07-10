@@ -5,27 +5,30 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="styles.css" type="text/css">
+	<link rel="stylesheet" href="/styles.css" type="text/css">
 
 	<title>Gabber - Signup</title>
 </head>
 
+<header class="signupHeader">
+	<p>Already signed up?</p>
+	<a href="/auth/login">Login Here</a>
+</header>
+
 <body class="signupBody">
-	<header>
-		<p>Already signed up?</p>
-		<a href="/auth/login">Login Here</a>
 
-	</header>
-	<h1>Gabber - Signup</h1>
-	<form action="/auth/signup" method="post">
+	<div class="signupFormContainer">
 
-		<input type="text" name="username" placeholder="username">
-		<br>
-		<input type="password" name="password" placeholder="password">
-		<br>
-		<input type="submit">
-		<form>
+		<h1>Gabber - Signup</h1>
 
+		<form action="/auth/signup" method="post">
+
+			<input type="text" name="username" placeholder="username">
+			<input type="password" name="password" placeholder="password">
+			<input type="submit">
+
+			<form>
+	</div>
 </body>
 
 </html>

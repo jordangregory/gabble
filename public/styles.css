@@ -12,15 +12,31 @@ html {
   text-align: center;
 }
 
-.gettingStarted {
+.gettingStartedContainer {
   background-color: white;
   display: flex;
   flex-direction: column;
   padding: 40px;
+  text-align: center;
 }
 
 /*Signup*/
 
+.signupHeader > a {
+  text-decoration: none;
+}
+
 .signupBody {
+  background-color: #4cbb17;
+}
+
+.signupFormContainer {
+  background-color: white;
+  text-align: center;
+}
+
+/*Login*/
+
+.loginBody {
   background-color: #4cbb17;
 }
