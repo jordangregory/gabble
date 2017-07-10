@@ -30,7 +30,7 @@ homeRouter.get("/", checkAuth, function(req, res) {
         }
         return e;
       });
-      res.render("homepage", { gabs: foundPosts });
+      res.render("homepage", { user: req.session.user, gabs: foundPosts });
     });
 });
 

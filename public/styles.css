@@ -1,0 +1,26 @@
+html {
+  font-family: sans-serif;
+  height: 100%;
+  width: 100%;
+}
+
+/*Welcome*/
+
+.welcomeBody {
+  background-color: #4cbb17;
+  display: flex;
+  text-align: center;
+}
+
+.gettingStarted {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+/*Signup*/
+
+.signupBody {
+  background-color: #4cbb17;
+}

@@ -14,32 +14,49 @@
 	<header>
 		<a href="/welcome">Logout</a>
 	</header>
-	<h1>Gabber - Home</h1>
+
+	<div>
+		<h1>Gabber - Home</h1>
+	</div>
+	<div>
+		<h2>Logged in as: {{user.username}}</h2>
+	</div>
+
 	<div>
 		<h1>New Gab</h1>
 		<form action="/gabs/gab" method="post">
 			<input type="textarea" name="body" placeholder="Gab it up">
 			<button type="submit">Gab It</button>
 		</form>
+
 		<h1>Gabs</h1>
+
 		<div class="gabList">
+
 			{{#gabs}}
 			<div>
-				{{body}} {{#delete}}
-				<form action="/delete/{{id}}/{{authorid}}" method="post">
-					<button type="submit">Delete</button>
-				</form>{{/delete}}
-				<p>Liked by:</p>
-				{{#likes}}
-				<p>{{user.username}}</p>
-				{{/likes}}
+				{{user.username}}: {{body}}
+				<div>{{#delete}}
+					<form action="/delete/{{id}}/{{authorid}}" method="post">
+						<button type="submit">Delete</button>
+					</form>{{/delete}}
+				</div>
+				<div>
+					<p>Liked by:</p>
+					{{#likes}}
+					<div>
+						<p>{{user.username}}</p>
+					</div>
+					{{/likes}}
+				</div>
+
 				<form action="/likes/{{id}}" method="post">
 					<button type="submit">Like</button>
-
 				</form>
 			</div>
 			{{/gabs}}
 		</div>
+
 	</div>
 </body>
 
