@@ -26,7 +26,7 @@
 	<div>
 		<h1>New Gab</h1>
 		<form action="/gabs/gab" method="post">
-			<input type="textarea" name="body" placeholder="Gab it up">
+			<input type="textarea" name="body" maxLength="140" placeholder="Gab it up">
 			<button type="submit">Gab It</button>
 		</form>
 
@@ -36,7 +36,7 @@
 
 			{{#gabs}}
 			<div class="gabContainer">
-				<p>{{author.username}}: {{body}}</p>
+				<p><b>{{author.username}}:</b> {{body}}</p>
 
 				<div>
 					{{#delete}}
