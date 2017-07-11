@@ -19,13 +19,11 @@ authRouter.post("/login", function(req, res) {
     .then(function(foundUser) {
       console.log("foundUser: ", foundUser);
       if (!foundUser) {
-        return res.redirect("/auth/login"); //user not found
+        return res.redirect("/auth/login");
       }
-      //check if the req.body.password matches the foundUser password.
-      // if they match, add a user property to the req.session.
       if (req.body.password === foundUser.password) {
         req.session.user = foundUser;
-        return res.redirect("/");
+        return res.redirect("/homepage");
       } else {
         return res.redirect("/auth/login");
       }

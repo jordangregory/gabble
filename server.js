@@ -36,8 +36,11 @@ app.use(
 );
 
 // Routers
+app.get("/", function(req, res) {
+  res.render("welcome");
+});
 app.use("/welcome", welcomeRoutes);
-app.use("/", homeRoutes);
+app.use("/homepage", homeRoutes);
 app.use("/auth", authRoutes);
 app.use("/likes", likeRoutes);
 app.use("/gabs", gabRoutes);
