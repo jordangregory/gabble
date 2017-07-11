@@ -46,10 +46,10 @@ homeRouter.post("/delete/:id/:authorid", (req, res) => {
         return post.destroy();
       })
       .then(task => {
-        return res.redirect("/");
+        return res.redirect("/homepage");
       });
   } else {
-    return res.redirect("/");
+    return res.redirect("/homepage");
   }
 });
 

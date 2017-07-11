@@ -9,7 +9,7 @@ html {
 .welcomeBody {
   background-color: #4cbb17;
   display: flex;
-  text-align: center;
+  justify-content: center;
 }
 
 .gettingStartedContainer {
@@ -25,35 +25,63 @@ html {
 .signupHeader > a {
   text-decoration: none;
 }
+.signupHeader {
+  text-align: center;
+}
 
 .signupBody {
   background-color: #4cbb17;
+  display: flex;
+  justify-content: center;
 }
 
 .signupFormContainer {
   background-color: goldenrod;
   text-align: center;
+  padding: 25px;
 }
 
 /*Login*/
 
 .loginBody {
   background-color: #4cbb17;
+  display: flex;
+  justify-content: center;
 }
 
 .loginFormContainer {
   text-align: center;
   background-color: goldenrod;
+
+  padding: 40px;
 }
 
 /*Homepage*/
 
+.homeHeaderContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
 .homepageBody {
   background-color: #4cbb17;
+  text-align: center;
+}
+
+.gabList {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .gabContainer {
   background-color: goldenrod;
   border: 5px solid lightcoral;
   padding: 25px;
+  width: 15rem;
+  margin: 5px;
+}
+
+.likedGabs {
+  display: flex;
+  flex-wrap: wrap;
 }

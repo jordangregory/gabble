@@ -20,7 +20,7 @@ gabRouter.post("/gab", function(req, res) {
     .catch(function(err) {
       console.warn("Error ", err);
     });
-  return res.redirect("/");
+  return res.redirect("/homepage");
 });
 
 module.exports = gabRouter;
