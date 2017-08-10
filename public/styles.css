@@ -1,13 +1,20 @@
 html {
-  font-family: sans-serif;
+  /* font-family: 'Just Me Again Down Here', "cursive"; */
+  /* font-family: 'Caveat', "cursive"; */
+  font-family: 'Reenie Beanie', "cursive";
   height: 100%;
   width: 100%;
+  background: url("./chalkboard.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  color: white;
 }
 
 /*Welcome*/
 
 .welcomeBody {
-  background-color: #4cbb17;
   display: flex;
   justify-content: center;
 }
@@ -18,6 +25,7 @@ html {
   flex-direction: column;
   padding: 40px;
   text-align: center;
+  opacity: 0.5;
 }
 
 /*Signup*/
@@ -30,30 +38,39 @@ html {
 }
 
 .signupBody {
-  background-color: #4cbb17;
   display: flex;
   justify-content: center;
 }
 
 .signupFormContainer {
-  background-color: goldenrod;
   text-align: center;
-  padding: 25px;
+  align-items: center;
+  padding: 20px;
+  font-size: 50px;
+  text-decoration: none;
+  text-shadow: 5px .5px gray;
 }
 
 /*Login*/
 
 .loginBody {
-  background-color: #4cbb17;
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.signUpLink {
+  text-decoration: none;
 }
 
 .loginFormContainer {
   text-align: center;
-  background-color: goldenrod;
-
-  padding: 40px;
+  align-items: center;
+  padding: 20px;
+  font-size: 50px;
+  text-decoration: none;
+  text-shadow: 5px .5px gray;
 }
 
 /*Homepage*/
@@ -61,10 +78,12 @@ html {
 .homeHeaderContainer {
   display: flex;
   justify-content: space-around;
+  box-sizing: border-box;
+  font-size: 20px;
+  text-decoration: none;
 }
 
 .homepageBody {
-  background-color: #4cbb17;
   text-align: center;
 }
 
@@ -74,14 +93,21 @@ html {
 }
 
 .gabContainer {
-  background-color: goldenrod;
-  border: 5px solid lightcoral;
   padding: 25px;
   width: 15rem;
   margin: 5px;
+  font-size: 30px;
+  background-color: black;
+  opacity: 0.5;
 }
 
 .likedGabs {
   display: flex;
   flex-wrap: wrap;
+}
+
+.logoutLink {
+  text-decoration: none;
+  font-size: 30px;
+  padding-top: 50px;
 }
