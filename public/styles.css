@@ -16,16 +16,29 @@ html {
 
 .welcomeBody {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .gettingStartedContainer {
-  background-color: goldenrod;
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
   text-align: center;
-  opacity: 0.5;
+  align-items: center;
+  padding: 20px;
+  font-size: 50px;
+  text-decoration: none;
+  text-shadow: 5px .5px gray;
+}
+
+.signupLink {
+  text-decoration: none;
+  color: black;
+}
+
+.loginLink {
+  text-decoration: none;
+  color: black;
 }
 
 /*Signup*/
@@ -39,7 +52,10 @@ html {
 
 .signupBody {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .signupFormContainer {
@@ -55,9 +71,10 @@ html {
 
 .loginBody {
   display: flex;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  text-decoration: none;
+  min-height: 100vh;
 }
 
 .signUpLink {
@@ -97,7 +114,6 @@ html {
   width: 15rem;
   margin: 5px;
   font-size: 30px;
-  background-color: black;
   opacity: 0.5;
 }
 
