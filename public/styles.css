@@ -92,9 +92,8 @@ html {
 
 .homeHeaderContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   box-sizing: border-box;
-  font-size: 20px;
   text-decoration: none;
 }
 
@@ -123,6 +122,6 @@ html {
 
 .logoutLink {
   text-decoration: none;
-  font-size: 30px;
-  padding-top: 50px;
+  margin-top: 50px;
+  color: white;
 }
